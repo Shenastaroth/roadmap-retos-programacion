@@ -35,7 +35,7 @@ public class Shenastaroth {
 
     //Extra
 
-    public static int extra(String texto1, String texto2){
+    static int extra(String texto1, String texto2){
         int [] count = {0};//Debo utilizar un arreglo para poder modificar dentro del Lambda
         IntStream.range(1, 100).forEach(i -> {
             if (i % 5 == 0 && i % 3 == 0) {
@@ -49,6 +49,8 @@ public class Shenastaroth {
                 count[0]++;
             }
         });;
+            // Muestra el total en la consola antes de salir de la función
+        System.out.println("El total de numeros contados es: " + count[0]);
         return count[0];
     }
     public static void main(String[] args) {
